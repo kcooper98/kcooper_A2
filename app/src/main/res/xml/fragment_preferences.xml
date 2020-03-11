@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <SwitchPreferenceCompat
+        app:defaultValue="false"
+        app:key="player_count"
+        app:summaryOff="1"
+        app:summaryOn="2"
+        app:title="Number of human players" />
+
+    <SwitchPreferenceCompat
+        app:defaultValue="false"
+        app:key="computer_difficulty"
+        app:summaryOff="Easy"
+        app:summaryOn="Hard"
+        app:title="Computer difficulty" />
+
+    <SwitchPreferenceCompat
+        app:defaultValue="true"
+        app:key="human_goes_first"
+        app:title="Human Goes First" />
+
+    <SwitchPreferenceCompat
+        app:defaultValue="true"
+        app:key="alternate_turns"
+        app:title="Alternate who goes first" />
+
+</PreferenceScreen>

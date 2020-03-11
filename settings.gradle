@@ -1,0 +1,2 @@
+rootProject.name='kcooper_A2'
+include ':app'
