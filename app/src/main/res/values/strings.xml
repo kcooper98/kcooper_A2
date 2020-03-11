@@ -1,9 +1,10 @@
 <resources>
     <string name="app_name">kcooper_A2</string>
-    <string name="welcome_description">Welcome to Avatar the Last Airbender Tic Tac Toe!
+    <string name="welcome_description">Welcome to Avatar: The Last Airbender Tic Tac Toe!
         Play as the water or fire nation in an epic battle for the physical world.</string>
     <string name="welcome_play_button">Play Game</string>
     <string name="welcome_history_button">History</string>
     <string name="welcome_preferences_button">Preferences</string>
     <string name="welcome_exit_button">Exit</string>
+    <string name="play_game">Play Game</string>
 </resources>
