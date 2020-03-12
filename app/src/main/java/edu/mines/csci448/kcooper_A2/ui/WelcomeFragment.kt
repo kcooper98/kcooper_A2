@@ -1,5 +1,6 @@
 package edu.mines.csci448.kcooper_A2.ui
 
+import android.content.Context
 import android.os.Bundle
 import android.util.Log
 import android.view.*
@@ -7,6 +8,14 @@ import androidx.fragment.app.Fragment
 import edu.mines.csci448.kcooper_A2.R
 
 class WelcomeFragment: Fragment() {
+    interface Callbacks {
+        fun startGame()
+        fun startHistory()
+        fun startSettings()
+    }
+
+    private var callbacks: Callbacks? = null
+
     private val logTag = "448.WelcomeFrag"
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -19,7 +28,19 @@ class WelcomeFragment: Fragment() {
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         Log.d(logTag, "onOptionsItemSelected() called")
         return when (item.itemId) {
-            R.id. // TODO: connect options menu to the game fragment, implement callbacks and link to main activity
+            R.id.new_game_menu_button -> {
+                callbacks?.startGame()
+                true
+            }
+            R.id.history_button -> {
+                callbacks?.startHistory()
+                true
+            }
+            R.id.settings_button -> {
+                callbacks?.startSettings()
+                true
+            }
+            else -> super.onOptionsItemSelected(item)
         }
     }
 
@@ -37,5 +58,17 @@ class WelcomeFragment: Fragment() {
         super.onCreateOptionsMenu(menu, inflater)
         Log.d(logTag, "onCreateOptionsMenu() called")
         inflater.inflate(R.menu.fragment_welcome, menu)
+    }
+
+    override fun onAttach(context: Context) {
+        super.onAttach(context)
+        Log.d(logTag, "onAttach() called")
+        callbacks = context as Callbacks?
+    }
+
+    override fun onDetach() {
+        super.onDetach()
+        Log.d(logTag, "onDetach() called")
+        callbacks=null
     }
 }

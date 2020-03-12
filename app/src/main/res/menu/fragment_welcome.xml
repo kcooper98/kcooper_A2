@@ -7,4 +7,22 @@
         android:title="@string/play_game"
         app:showAsAction="ifRoom|withText" />
 
+    <item
+        android:id="@+id/history_button"
+        android:icon="@drawable/ic_menu_history"
+        android:title="Show History"
+        app:showAsAction="ifRoom|withText" />
+
+    <item
+        android:id="@+id/settings_button"
+        android:icon="@drawable/ic_menu_settings"
+        android:title="Preferences"
+        app:showAsAction="ifRoom|withText" />
+
+    <item
+        android:id="@+id/exit_button"
+        android:icon="@drawable/ic_menu_exit"
+        android:title="Close App"
+        app:showAsAction="ifRoom|withText" />
+
 </menu>
