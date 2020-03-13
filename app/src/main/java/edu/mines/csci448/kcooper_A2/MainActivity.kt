@@ -2,8 +2,7 @@ package edu.mines.csci448.kcooper_A2
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.provider.Settings
-import edu.mines.csci448.kcooper_A2.ui.GameFragment
+import edu.mines.csci448.kcooper_A2.ui.game.GameFragment
 import edu.mines.csci448.kcooper_A2.ui.HistoryFragment
 import edu.mines.csci448.kcooper_A2.ui.SettingsFragment
 import edu.mines.csci448.kcooper_A2.ui.WelcomeFragment

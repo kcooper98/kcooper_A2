@@ -1,4 +1,4 @@
-package edu.mines.csci448.kcooper_A2.ui
+package edu.mines.csci448.kcooper_A2.ui.game
 
 import android.os.Bundle
 import android.util.Log
