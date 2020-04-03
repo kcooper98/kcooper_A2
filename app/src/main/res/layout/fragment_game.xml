@@ -12,58 +12,31 @@
         android:layout_height="wrap_content"
         tools:text="Turn Indicator" />
 
-    <LinearLayout
-        android:layout_width="match_parent"
+
+    <GridLayout
+        android:padding="16dp"
+        android:alignmentMode="alignBounds"
+        android:useDefaultMargins="true"
+        android:rowCount="3"
+        android:columnCount="3"
+        android:id="@+id/layout_board"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:gravity="center_horizontal">
+        android:id="@+id/button_restart"
+        android:text="@string/button_restart"
+        android:layout_marginBottom="15dp" />
 
-        <ImageButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
-
-        <ImageButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
-
-        <ImageButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
+    <Button
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:gravity="center_horizontal">
+        android:id="@+id/button_return"
+        android:text="@string/button_return" />
 
-        <ImageButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
 
-        <ImageButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
 
-        <ImageButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center_horizontal">
-
-        <ImageButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
-
-        <ImageButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
-
-        <ImageButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
-    </LinearLayout>
 
 </LinearLayout>

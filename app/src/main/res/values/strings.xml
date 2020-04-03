@@ -7,4 +7,6 @@
     <string name="welcome_preferences_button">Preferences</string>
     <string name="welcome_exit_button">Exit</string>
     <string name="play_game">Play Game</string>
+    <string name="button_restart">Restart Game</string>
+    <string name="button_return">Return</string>
 </resources>
