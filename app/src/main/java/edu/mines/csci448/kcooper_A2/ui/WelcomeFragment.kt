@@ -12,6 +12,7 @@ class WelcomeFragment: Fragment() {
         fun startGame()
         fun startHistory()
         fun startSettings()
+        fun closeApp()
     }
 
     private var callbacks: Callbacks? = null
@@ -38,6 +39,10 @@ class WelcomeFragment: Fragment() {
             }
             R.id.settings_button -> {
                 callbacks?.startSettings()
+                true
+            }
+            R.id.exit_button -> {
+                callbacks?.closeApp()
                 true
             }
             else -> super.onOptionsItemSelected(item)

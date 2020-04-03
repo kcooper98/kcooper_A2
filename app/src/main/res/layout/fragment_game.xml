@@ -7,10 +7,10 @@
     android:orientation="vertical">
 
     <TextView
-        android:id="@+id/turn_indicator"
+        android:id="@+id/status_indicator"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        tools:text="Turn Indicator" />
+        tools:text="Status indicator" />
 
 
     <GridLayout
@@ -28,12 +28,18 @@
         android:layout_height="wrap_content"
         android:id="@+id/button_restart"
         android:text="@string/button_restart"
-        android:layout_marginBottom="15dp" />
+        android:background="@color/colorAccent"
+        android:padding="15dp"
+        android:layout_marginBottom="15dp"
+        android:visibility="gone"/>
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/button_return"
+        android:background="@color/colorAccent"
+        android:padding="15dp"
+        android:visibility="gone"
         android:text="@string/button_return" />
 
 

@@ -9,4 +9,7 @@
     <string name="play_game">Play Game</string>
     <string name="button_restart">Restart Game</string>
     <string name="button_return">Return</string>
+    <string name="fire_win_label">Fire Nation won</string>
+    <string name="water_win_label">Water Nation won</string>
+    <string name="tie_label">Nobody wins! Tie.</string>
 </resources>

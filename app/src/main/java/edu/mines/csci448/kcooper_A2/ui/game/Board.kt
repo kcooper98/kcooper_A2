@@ -3,7 +3,7 @@ package edu.mines.csci448.kcooper_A2.ui.game
 class Board(val player: String, val computer: String) {
     val board = Array(3) { arrayOfNulls<String>(3) }
 
-    val availableCells: List<Cell>
+    private val availableCells: List<Cell>
         get() {
             // Iterate through all cells and add them to the list if they are null
             val cells = mutableListOf<Cell>()
@@ -75,9 +75,13 @@ class Board(val player: String, val computer: String) {
 
     var computerMove: Cell? = null
 
+    fun easyMove() {
+        computerMove = availableCells.shuffled().take(1)[0]
+    }
+
     // AI for computer to win
-    fun minimax(depth: Int, player: String): Int {
-        if (hasComputerWon()) return +1
+    fun minimax(depth: Int, tPlayer: String): Int {
+        if (hasComputerWon()) return 1
         if (hasPlayerWon()) return -1
 
         if (availableCells.isEmpty()) return 0
@@ -87,7 +91,7 @@ class Board(val player: String, val computer: String) {
 
         for (i in availableCells.indices) {
             val cell = availableCells[i]
-            if (player == computer) {
+            if (tPlayer == computer) {
                 placeMove(cell, computer)
                 val currentScore = minimax(depth + 1, player)
                 max = Math.max(currentScore, max)
@@ -105,7 +109,7 @@ class Board(val player: String, val computer: String) {
                     if (depth == 0) computerMove = cell
                 }
 
-            } else if (player == player) {
+            } else if (tPlayer == player) {
                 placeMove(cell, player)
                 val currentScore = minimax(depth + 1, computer)
                 min = Math.min(currentScore, min)
@@ -118,7 +122,7 @@ class Board(val player: String, val computer: String) {
             board[cell.i][cell.j] = ""
         }
 
-        return if (player == computer) max else min
+        return if (tPlayer == computer) max else min
     }
 
     // Modify board with move
